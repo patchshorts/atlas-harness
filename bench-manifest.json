@@ -1,0 +1,792 @@
+{
+  "created_at": "2026-08-16",
+  "custom": {
+    "base_dir": "packages/bench/bench/tasks/custom",
+    "design": "spec \u00a74.2: each task = pinned micro-repo <= 200 LOC + fixed prompt + deterministic verifier (verify.sh, exit 0 = pass). 5 memory/recall, 2 research, 2 factory-critic, 1 coordination. Harder tier (2026-08-17): 3 capability-gated tasks measuring additive features \u2014 hrd-01 iteration, hrd-02 cross-turn memory (retain-tool gate via session log), hrd-03 plan/todo discipline (todo-tool gate via session log). Clone arm lacks the tools \u2192 fails; additive arm has them \u2192 passes. Verifier contract extended: verify.sh receives session log as $2.",
+    "tasks": [
+      {
+        "estimated_min_tool_calls": 5,
+        "id": "mem-1-config-drift",
+        "loc_count": 96,
+        "micro_repo": "packages/bench/bench/tasks/custom/mem-1-config-drift/repo",
+        "note": "canonical config recall across 5 services",
+        "prompt": "packages/bench/bench/tasks/custom/mem-1-config-drift/prompt.md",
+        "surface": "memory/recall",
+        "verifier": "packages/bench/bench/tasks/custom/mem-1-config-drift/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 4,
+        "id": "mem-2-convention-consistency",
+        "loc_count": 53,
+        "micro_repo": "packages/bench/bench/tasks/custom/mem-2-convention-consistency/repo",
+        "note": "convention recall + trap module",
+        "prompt": "packages/bench/bench/tasks/custom/mem-2-convention-consistency/prompt.md",
+        "surface": "memory/recall",
+        "verifier": "packages/bench/bench/tasks/custom/mem-2-convention-consistency/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 4,
+        "id": "mem-3-state-recall",
+        "loc_count": 74,
+        "micro_repo": "packages/bench/bench/tasks/custom/mem-3-state-recall/repo",
+        "note": "same-session state flow",
+        "prompt": "packages/bench/bench/tasks/custom/mem-3-state-recall/prompt.md",
+        "surface": "memory/recall",
+        "verifier": "packages/bench/bench/tasks/custom/mem-3-state-recall/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 4,
+        "id": "mem-4-parallel-fix",
+        "loc_count": 64,
+        "micro_repo": "packages/bench/bench/tasks/custom/mem-4-parallel-fix/repo",
+        "note": "fix-pattern transfer across twin parsers",
+        "prompt": "packages/bench/bench/tasks/custom/mem-4-parallel-fix/prompt.md",
+        "surface": "memory/recall",
+        "verifier": "packages/bench/bench/tasks/custom/mem-4-parallel-fix/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 4,
+        "id": "mem-5-dependency-matrix",
+        "loc_count": 27,
+        "micro_repo": "packages/bench/bench/tasks/custom/mem-5-dependency-matrix/repo",
+        "note": "dependency-matrix constraint recall",
+        "prompt": "packages/bench/bench/tasks/custom/mem-5-dependency-matrix/prompt.md",
+        "surface": "memory/recall",
+        "verifier": "packages/bench/bench/tasks/custom/mem-5-dependency-matrix/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 5,
+        "id": "res-1-arxiv-client",
+        "loc_count": 29,
+        "micro_repo": "packages/bench/bench/tasks/custom/res-1-arxiv-client/repo",
+        "note": "verify live arXiv API before implementing",
+        "prompt": "packages/bench/bench/tasks/custom/res-1-arxiv-client/prompt.md",
+        "surface": "research",
+        "verifier": "packages/bench/bench/tasks/custom/res-1-arxiv-client/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 4,
+        "id": "res-2-pydantic-v2",
+        "loc_count": 50,
+        "micro_repo": "packages/bench/bench/tasks/custom/res-2-pydantic-v2/repo",
+        "note": "verify installed pydantic semantics",
+        "prompt": "packages/bench/bench/tasks/custom/res-2-pydantic-v2/prompt.md",
+        "surface": "research",
+        "verifier": "packages/bench/bench/tasks/custom/res-2-pydantic-v2/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 4,
+        "id": "crit-1-plan-follow",
+        "loc_count": 34,
+        "micro_repo": "packages/bench/bench/tasks/custom/crit-1-plan-follow/repo",
+        "note": "plan deviation (stdlib-sort cheat)",
+        "prompt": "packages/bench/bench/tasks/custom/crit-1-plan-follow/prompt.md",
+        "surface": "factory-critic",
+        "verifier": "packages/bench/bench/tasks/custom/crit-1-plan-follow/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 4,
+        "id": "crit-2-todo-contract",
+        "loc_count": 31,
+        "micro_repo": "packages/bench/bench/tasks/custom/crit-2-todo-contract/repo",
+        "note": "todo contract adherence",
+        "prompt": "packages/bench/bench/tasks/custom/crit-2-todo-contract/prompt.md",
+        "surface": "factory-critic",
+        "verifier": "packages/bench/bench/tasks/custom/crit-2-todo-contract/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 5,
+        "id": "coord-1-subtask-handoff",
+        "loc_count": 43,
+        "micro_repo": "packages/bench/bench/tasks/custom/coord-1-subtask-handoff/repo",
+        "note": "worker subtask handoff artifact",
+        "prompt": "packages/bench/bench/tasks/custom/coord-1-subtask-handoff/prompt.md",
+        "surface": "coordination",
+        "verifier": "packages/bench/bench/tasks/custom/coord-1-subtask-handoff/verify.sh"
+      },
+      {
+        "id": "dbg-01-merge-offbyone",
+        "surface": "debugging/repair",
+        "note": "merge sort drops middle element (off-by-one slice)",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 42,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-01-merge-offbyone/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-01-merge-offbyone/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-01-merge-offbyone/verify.sh"
+      },
+      {
+        "id": "dbg-03-encoding-trap",
+        "surface": "debugging/repair",
+        "note": "reader utf-8 only, utf-16 BOM fixture fails",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 13,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-03-encoding-trap/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-03-encoding-trap/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-03-encoding-trap/verify.sh"
+      },
+      {
+        "id": "dbg-04-timezone-trap",
+        "surface": "debugging/repair",
+        "note": "naive utcnow() vs aware UTC contract",
+        "estimated_min_tool_calls": 3,
+        "loc_count": 21,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-04-timezone-trap/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-04-timezone-trap/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-04-timezone-trap/verify.sh"
+      },
+      {
+        "id": "dbg-05-mutable-default",
+        "surface": "debugging/repair",
+        "note": "mutable default arg mutates shared list",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 33,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-05-mutable-default/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-05-mutable-default/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-05-mutable-default/verify.sh"
+      },
+      {
+        "id": "dbg-06-shadow-builtin",
+        "surface": "debugging/repair",
+        "note": "module-level list shadows builtin, legacy export kept",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 15,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-06-shadow-builtin/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-06-shadow-builtin/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-06-shadow-builtin/verify.sh"
+      },
+      {
+        "id": "dbg-07-exception-contract",
+        "surface": "debugging/repair",
+        "note": "wrong exception type (ValueError vs KeyError)",
+        "estimated_min_tool_calls": 3,
+        "loc_count": 31,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-07-exception-contract/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-07-exception-contract/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-07-exception-contract/verify.sh"
+      },
+      {
+        "id": "dbg-08-loop-step",
+        "surface": "debugging/repair",
+        "note": "range step skips odd indices",
+        "estimated_min_tool_calls": 3,
+        "loc_count": 22,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-08-loop-step/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-08-loop-step/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-08-loop-step/verify.sh"
+      },
+      {
+        "id": "dbg-09-parse-currency",
+        "surface": "debugging/repair",
+        "note": "strips decimal point while parsing currency",
+        "estimated_min_tool_calls": 3,
+        "loc_count": 15,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-09-parse-currency/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-09-parse-currency/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-09-parse-currency/verify.sh"
+      },
+      {
+        "id": "dbg-10-cache-stale",
+        "surface": "debugging/repair",
+        "note": "TTL cache inverted expiry check",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 32,
+        "micro_repo": "packages/bench/bench/tasks/custom/dbg-10-cache-stale/repo",
+        "prompt": "packages/bench/bench/tasks/custom/dbg-10-cache-stale/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/dbg-10-cache-stale/verify.sh"
+      },
+      {
+        "id": "ref-01-api-migration",
+        "surface": "refactor/API-usage",
+        "note": "old connect(host,port,user) API at 2 call sites",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 23,
+        "micro_repo": "packages/bench/bench/tasks/custom/ref-01-api-migration/repo",
+        "prompt": "packages/bench/bench/tasks/custom/ref-01-api-migration/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/ref-01-api-migration/verify.sh"
+      },
+      {
+        "id": "ref-02-import-upgrade",
+        "surface": "refactor/API-usage",
+        "note": "deprecated module; new parse rejects dup keys",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 33,
+        "micro_repo": "packages/bench/bench/tasks/custom/ref-02-import-upgrade/repo",
+        "prompt": "packages/bench/bench/tasks/custom/ref-02-import-upgrade/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/ref-02-import-upgrade/verify.sh"
+      },
+      {
+        "id": "ref-03-config-schema",
+        "surface": "refactor/API-usage",
+        "note": "JSON-only reader must also load new YAML schema",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 17,
+        "micro_repo": "packages/bench/bench/tasks/custom/ref-03-config-schema/repo",
+        "prompt": "packages/bench/bench/tasks/custom/ref-03-config-schema/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/ref-03-config-schema/verify.sh"
+      },
+      {
+        "id": "grn-01-state-machine",
+        "surface": "greenfield",
+        "note": "permissive state machine must raise on invalid",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 31,
+        "micro_repo": "packages/bench/bench/tasks/custom/grn-01-state-machine/repo",
+        "prompt": "packages/bench/bench/tasks/custom/grn-01-state-machine/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/grn-01-state-machine/verify.sh"
+      },
+      {
+        "id": "grn-02-quoted-csv",
+        "surface": "greenfield",
+        "note": "naive CSV split fails quoted/escaped fields",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 15,
+        "micro_repo": "packages/bench/bench/tasks/custom/grn-02-quoted-csv/repo",
+        "prompt": "packages/bench/bench/tasks/custom/grn-02-quoted-csv/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/grn-02-quoted-csv/verify.sh"
+      },
+      {
+        "id": "grn-03-token-bucket",
+        "surface": "greenfield",
+        "note": "token bucket refills to full instead of accumulating",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 37,
+        "micro_repo": "packages/bench/bench/tasks/custom/grn-03-token-bucket/repo",
+        "prompt": "packages/bench/bench/tasks/custom/grn-03-token-bucket/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/grn-03-token-bucket/verify.sh"
+      },
+      {
+        "id": "mem-06-precedence-trap",
+        "surface": "memory/recall",
+        "note": "retry-config precedence env > file > default",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 48,
+        "micro_repo": "packages/bench/bench/tasks/custom/mem-06-precedence-trap/repo",
+        "prompt": "packages/bench/bench/tasks/custom/mem-06-precedence-trap/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/mem-06-precedence-trap/verify.sh"
+      },
+      {
+        "id": "mem-07-shared-client",
+        "surface": "memory/recall",
+        "note": "services must route through client contract",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 34,
+        "micro_repo": "packages/bench/bench/tasks/custom/mem-07-shared-client/repo",
+        "prompt": "packages/bench/bench/tasks/custom/mem-07-shared-client/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/mem-07-shared-client/verify.sh"
+      },
+      {
+        "id": "res-03-schema-verify",
+        "surface": "research",
+        "note": "validator ignores type mismatches",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 25,
+        "micro_repo": "packages/bench/bench/tasks/custom/res-03-schema-verify/repo",
+        "prompt": "packages/bench/bench/tasks/custom/res-03-schema-verify/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/res-03-schema-verify/verify.sh"
+      },
+      {
+        "id": "crit-03-todo-honesty",
+        "surface": "factory-critic",
+        "note": "stub returns canned value; must compute per plan",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 13,
+        "micro_repo": "packages/bench/bench/tasks/custom/crit-03-todo-honesty/repo",
+        "prompt": "packages/bench/bench/tasks/custom/crit-03-todo-honesty/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/crit-03-todo-honesty/verify.sh"
+      },
+      {
+        "id": "coord-02-artifact-schema",
+        "surface": "coordination",
+        "note": "worker B must read derived artifact, not raw input",
+        "estimated_min_tool_calls": 4,
+        "loc_count": 29,
+        "micro_repo": "packages/bench/bench/tasks/custom/coord-02-artifact-schema/repo",
+        "prompt": "packages/bench/bench/tasks/custom/coord-02-artifact-schema/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/coord-02-artifact-schema/verify.sh"
+      },
+      {
+        "id": "hrd-01-iterative-repair",
+        "surface": "iteration",
+        "note": "six interdependent bugs; fixing one reveals the next; requires test-run loop",
+        "estimated_min_tool_calls": 10,
+        "loc_count": 64,
+        "micro_repo": "packages/bench/bench/tasks/custom/hrd-01-iterative-repair/repo",
+        "prompt": "packages/bench/bench/tasks/custom/hrd-01-iterative-repair/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/hrd-01-iterative-repair/verify.sh"
+      },
+      {
+        "id": "hrd-02-cross-turn-memory",
+        "surface": "memory/cross-turn",
+        "note": "SPEC deleted mid-session; facts must persist via retain tool; log-gated",
+        "estimated_min_tool_calls": 8,
+        "loc_count": 38,
+        "micro_repo": "packages/bench/bench/tasks/custom/hrd-02-cross-turn-memory/repo",
+        "prompt": "packages/bench/bench/tasks/custom/hrd-02-cross-turn-memory/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/hrd-02-cross-turn-memory/verify.sh"
+      },
+      {
+        "id": "hrd-03-plan-discipline",
+        "surface": "plan/todo",
+        "note": "6-step ordered pipeline; hardcode shortcut trap; todo-gated via session log",
+        "estimated_min_tool_calls": 12,
+        "loc_count": 118,
+        "micro_repo": "packages/bench/bench/tasks/custom/hrd-03-plan-discipline/repo",
+        "prompt": "packages/bench/bench/tasks/custom/hrd-03-plan-discipline/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/hrd-03-plan-discipline/verify.sh"
+      },
+      {
+        "id": "trv-01-trivial-turn",
+        "surface": "trivial-turn",
+        "note": "cost-thesis data point: trivial greeting, zero tool calls, expected short reply. Gates on session log (assistant reply + 0 tool calls); token-in/cost measured separately (T11).",
+        "estimated_min_tool_calls": 0,
+        "loc_count": 0,
+        "micro_repo": "packages/bench/bench/tasks/custom/trv-01-trivial-turn/repo",
+        "prompt": "packages/bench/bench/tasks/custom/trv-01-trivial-turn/prompt.md",
+        "verifier": "packages/bench/bench/tasks/custom/trv-01-trivial-turn/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 10,
+        "id": "web-01-token-contradiction",
+        "loc_count": 94,
+        "micro_repo": "packages/bench/bench/tasks/custom/web-01-token-contradiction/repo",
+        "note": "turn-1 no-literal-colour constraint must survive to turn-2 promo banner (add token not hex)",
+        "prompt": "packages/bench/bench/tasks/custom/web-01-token-contradiction/prompt.md",
+        "surface": "memory/cross-turn/retrieval",
+        "verifier": "packages/bench/bench/tasks/custom/web-01-token-contradiction/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 10,
+        "id": "mail-01-superseded-figures",
+        "loc_count": 246,
+        "micro_repo": "packages/bench/bench/tasks/custom/mail-01-superseded-figures/repo",
+        "note": "turn-1 cross-ref to CHANGELOG for current figures; turn-2 redact customer count raw + derived",
+        "prompt": "packages/bench/bench/tasks/custom/mail-01-superseded-figures/prompt.md",
+        "surface": "retrieval-precedence/cross-turn/redaction",
+        "verifier": "packages/bench/bench/tasks/custom/mail-01-superseded-figures/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 10,
+        "id": "fin-01-effective-rate",
+        "loc_count": 630,
+        "micro_repo": "packages/bench/bench/tasks/custom/fin-01-effective-rate/repo",
+        "note": "turn-1 effective-date rate + per-line rounding (\u00a72/\u00a73); turn-2 regional breakout must not change grand (\u00a74)",
+        "prompt": "packages/bench/bench/tasks/custom/fin-01-effective-rate/prompt.md",
+        "surface": "contract-reading/cross-turn/invariant",
+        "verifier": "packages/bench/bench/tasks/custom/fin-01-effective-rate/verify.sh"
+      }
+    ]
+  },
+  "lexicon": {
+    "c3_c5_tokens": [
+      "wrong",
+      "incorrect",
+      "mistake",
+      "sorry",
+      "my error",
+      "that failed",
+      "redo",
+      "revert",
+      "undo",
+      "roll back",
+      "retry",
+      "fix it",
+      "fix this",
+      "do not",
+      "dont",
+      "stop",
+      "no",
+      "cancel",
+      "actually",
+      "instead",
+      "not what",
+      "use ... instead",
+      "you missed",
+      "broken",
+      "does not work"
+    ],
+    "exclusions": [
+      "first-attempt failure with no retry (counted in task success, not corrections)",
+      "tool/result error the agent never re-calls (dead end)",
+      "compaction events (assistant/message from a summarizer)",
+      "user messages over 200 chars (task specification text)"
+    ],
+    "frozen": true,
+    "matching": "exact match on lowercase message text (C3 self-correction messages + C5 user corrections)",
+    "source": "benchmark-spec.md \u00a72.2"
+  },
+  "loop": "atlas-harness benchmark campaign",
+  "manifest_sha256": "26d741ac737030952df02b1ec68cf6523f67bf0e05580070f31a88f9dbe520b8",
+  "model_pin": {
+    "max_tokens": "pinned at run start (T5 bench-run config)",
+    "model": "pinned at run start (T5 bench-run config; DEEPSEEK_API_KEY present)",
+    "temperature": 0
+  },
+  "pre_registered_swaps": [
+    "Terminal-Bench 'Fable 5' set: interpreted as the Terminal-Bench task suite (Fable 5 = Claude model in the cited comparison); 20-task subset per \u00a74.3 (this manifest)",
+    "GPU/inference tasks (exam-pdf-eval gpu=1; sglang-qwen-burst, vllm-deepseek-streaming LLM-serving) excluded \u2014 CPU-only bench host",
+    {
+      "iteration": 2,
+      "trigger": "spec \u00a76.3 quality gate: both arms < 60% success (clone 24.1%, additive 26.7%)",
+      "action": "rebalance suite to 30 custom tasks: keep 10 existing (80% success), add 20 new trap-calibrated tasks, drop all 20 tbench tasks (0/40 success)",
+      "evidence": "bench-results.md iteration 1: 23/30 zero-signal tasks, all 15 corrections from 7 tbench tasks, tbench 0/40 success",
+      "rationale": "failures without corrections carry no signal (\u00a76.3); new tasks calibrated so first attempt is plausibly wrong (C1/C3) and retry succeeds",
+      "pre_registered": true
+    }
+  ],
+  "prices": {
+    "cached_input_per_mtok": 0.0033,
+    "currency": "USD",
+    "output_per_mtok": 0.435,
+    "sheet_date": "2026-08-16 (pinned at T5; pro-model sheet per spec \u00a77 \u2014 both arms priced identically, so the relative claim is price-model invariant)",
+    "source": "benchmark-spec.md \u00a77 (pro model)",
+    "uncached_input_per_mtok": 0.435
+  },
+  "run_order": "clone arm FIRST (30 sessions), additive arm SECOND (30 sessions); same machine/model/day; fresh session dir + fresh sandbox per session; additive memory store per-session-empty (no cross-session priming). Paired: same 30 tasks per arm.",
+  "schema_version": "1.0",
+  "selection_authorship": "benchmark task selection, 2026-08-16; suite frozen in this file; changing it mid-run invalidates the run (pre-registration rule, spec \u00a72.2/\u00a79)",
+  "shas": {
+    "additive_harness_head": "pinned at run start (spec \u00a78 snapshot: additive commits at their SHAs)",
+    "frozen_files": "FROZEN_FILES.sha256 (repo root, 474 entries) \u2014 re-hashed per commit, 0 mismatches",
+    "harness_clone_pin": "47f943859b",
+    "tbench_upstream": "d435a67e30ecb41f916716607c30c4646f208ee6"
+  },
+  "source_spec": "benchmark-spec.md \u00a74, \u00a72, \u00a77",
+  "suite": {
+    "custom": 30,
+    "tbench": 0,
+    "total": 30
+  },
+  "tbench": {
+    "fable5_note": "Fable 5 is the Claude model in the harness comparison the bet cites (Terminal-Bench: 83.8% Claude Code vs 80.4% Terminus 2, same weights, harness decides). The suite is the Terminal-Bench task set; the 20-task subset is pinned here per \u00a74.3. Pre-registered selection, not post-hoc (plank: Fable 5 task availability).",
+    "run_command": "harbor run -d terminal-bench/terminal-bench (Docker available on bench host; runner materializes tasks at the pinned commit)",
+    "selection_policy": "spec \u00a74.3: verifiable completion (tests/ present), >=3 tool calls (complexity proxy, actuals measured from session logs at run time), agent timeout <= 120 min, verifier budget <= 30 min, no GPU/inference tasks (CPU box, nvidia-smi absent), mix >= 40% debugging/repair, <= 30% greenfield, rest refactor/API-usage",
+    "tasks": [],
+    "upstream_commit": "d435a67e30ecb41f916716607c30c4646f208ee6",
+    "upstream_repo": "https://github.com/harbor-framework/terminal-bench",
+    "rebalance_note": "DROPPED iteration 2 (spec \u00a76.3): 20/20 tasks failed both arms in iteration 1 (0/40 success on clone + additive), 13/20 zero-signal; the 7 correction-producing tasks carried signal but no success. Suite too hard for the pinned model -> rebalanced to 30 custom tasks. Original selection preserved above for audit."
+  },
+  "reserve": {
+    "tasks": [
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-01-running-sum",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-01-running-sum/repo",
+        "note": "signal-class debug trap",
+        "prompt": "packages/bench/bench/tasks/custom/rv-01-running-sum/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-01-running-sum/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-02-shadow-loop",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-02-shadow-loop/repo",
+        "note": "signal-class debug trap",
+        "prompt": "packages/bench/bench/tasks/custom/rv-02-shadow-loop/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-02-shadow-loop/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-03-zero-guard",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-03-zero-guard/repo",
+        "note": "signal-class debug trap",
+        "prompt": "packages/bench/bench/tasks/custom/rv-03-zero-guard/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-03-zero-guard/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-04-mutable-default",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-04-mutable-default/repo",
+        "note": "signal-class debug trap",
+        "prompt": "packages/bench/bench/tasks/custom/rv-04-mutable-default/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-04-mutable-default/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-05-key-normalize",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-05-key-normalize/repo",
+        "note": "signal-class debug trap",
+        "prompt": "packages/bench/bench/tasks/custom/rv-05-key-normalize/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-05-key-normalize/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-06-lower-bound",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-06-lower-bound/repo",
+        "note": "signal-class debug trap",
+        "prompt": "packages/bench/bench/tasks/custom/rv-06-lower-bound/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-06-lower-bound/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-07-unique-order",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-07-unique-order/repo",
+        "note": "set() drops duplicates but loses first-seen order; use a seen-guard scan.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-07-unique-order/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-07-unique-order/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-08-chunk",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-08-chunk/repo",
+        "note": "Slice each window instead of selecting a single element per page.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-08-chunk/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-08-chunk/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-09-merge-safe",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-09-merge-safe/repo",
+        "note": "Writing into the caller's `a` mutates it; copy before overlaying b.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-09-merge-safe/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-09-merge-safe/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-10-flatten",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-10-flatten/repo",
+        "note": "One-level comprehension leaves nested lists; recurse into sub-lists.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-10-flatten/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-10-flatten/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-11-rotate",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-11-rotate/repo",
+        "note": "The stub rotates LEFT instead of RIGHT and mishandles k > len; rotate right and normalize k.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-11-rotate/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-11-rotate/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-12-tally",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-12-tally/repo",
+        "note": "Tally is case-sensitive; fold keys to lowercase.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-12-tally/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-12-tally/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-13-wrap-config",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-13-wrap-config/repo",
+        "note": "wrap ignored the imported config.MAX_LEN and used a literal; honor the configured value.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-13-wrap-config/prompt.md",
+        "surface": "multi-file",
+        "verifier": "packages/bench/bench/tasks/custom/rv-13-wrap-config/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-14-tax-rate",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-14-tax-rate/repo",
+        "note": "total hardcoded 8% instead of importing the authoritative RATE from rate.py.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-14-tax-rate/prompt.md",
+        "surface": "multi-file",
+        "verifier": "packages/bench/bench/tasks/custom/rv-14-tax-rate/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-15-fee-helper",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-15-fee-helper/repo",
+        "note": "Bug is in the fees helper (spurious +0.5), not the order caller.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-15-fee-helper/prompt.md",
+        "surface": "multi-file",
+        "verifier": "packages/bench/bench/tasks/custom/rv-15-fee-helper/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-16-mean-helper",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-16-mean-helper/repo",
+        "note": "Integer division truncates the mean to an int; needs true division.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-16-mean-helper/prompt.md",
+        "surface": "multi-file",
+        "verifier": "packages/bench/bench/tasks/custom/rv-16-mean-helper/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-17-name-clean",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-17-name-clean/repo",
+        "note": "clean() forgot to lowercase; the caller already delegates correctly.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-17-name-clean/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-17-name-clean/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-18-region-pick",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-18-region-pick/repo",
+        "note": "pick returned the highest-precedence entry; lowest precedence is the last element.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-18-region-pick/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-18-region-pick/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-19-indent-depth",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-19-indent-depth/repo",
+        "note": "Off-by-one: level 2 should produce 4 spaces, not 2.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-19-indent-depth/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-19-indent-depth/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-20-window-size",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-20-window-size/repo",
+        "note": "rolling_mean hardcoded k=2 instead of using the imported WINDOW; honor the config.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-20-window-size/prompt.md",
+        "surface": "debug",
+        "verifier": "packages/bench/bench/tasks/custom/rv-20-window-size/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-21-stale-dir",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-21-stale-dir/repo",
+        "note": "Stale reference to configs/settings.json; settings.json sits directly beside the module.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-21-stale-dir/prompt.md",
+        "surface": "path",
+        "verifier": "packages/bench/bench/tasks/custom/rv-21-stale-dir/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-22-stale-subdir",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-22-stale-subdir/repo",
+        "note": "Stale reference to a nested data/ dir; tokens.csv sits beside the module.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-22-stale-subdir/prompt.md",
+        "surface": "path",
+        "verifier": "packages/bench/bench/tasks/custom/rv-22-stale-subdir/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-23-stale-dir",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-23-stale-dir/repo",
+        "note": "Stale reference to an old/ dir; conf.json sits beside the module.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-23-stale-dir/prompt.md",
+        "surface": "path",
+        "verifier": "packages/bench/bench/tasks/custom/rv-23-stale-dir/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-24-parent-path",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-24-parent-path/repo",
+        "note": "Wrong parent (..) reference; rows.txt lives beside the module.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-24-parent-path/prompt.md",
+        "surface": "path",
+        "verifier": "packages/bench/bench/tasks/custom/rv-24-parent-path/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-25-stale-dir",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-25-stale-dir/repo",
+        "note": "Stale nested lib/ dir; lib.txt sits beside the module.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-25-stale-dir/prompt.md",
+        "surface": "path",
+        "verifier": "packages/bench/bench/tasks/custom/rv-25-stale-dir/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-26-stale-archive",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-26-stale-archive/repo",
+        "note": "Stale archive/ dir; mapping.json sits beside the module.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-26-stale-archive/prompt.md",
+        "surface": "path",
+        "verifier": "packages/bench/bench/tasks/custom/rv-26-stale-archive/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-27-clamp-contract",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-27-clamp-contract/repo",
+        "note": "The docstring contract requires ValueError on inverted bounds; the visible tests never exercised it.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-27-clamp-contract/prompt.md",
+        "surface": "contract",
+        "verifier": "packages/bench/bench/tasks/custom/rv-27-clamp-contract/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-28-batches-contract",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-28-batches-contract/repo",
+        "note": "The docstring contract requires ValueError when size <= 0; the happy-path tests never exercise it.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-28-batches-contract/prompt.md",
+        "surface": "contract",
+        "verifier": "packages/bench/bench/tasks/custom/rv-28-batches-contract/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-29-parser-contract",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-29-parser-contract/repo",
+        "note": "Contract requires ValueError on any blank/whitespace field; happy-path tests never exercise it.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-29-parser-contract/prompt.md",
+        "surface": "contract",
+        "verifier": "packages/bench/bench/tasks/custom/rv-29-parser-contract/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-30-zscore-contract",
+        "loc": 20,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-30-zscore-contract/repo",
+        "note": "Contract requires [None] for length-1 and ValueError for empty; visible tests only cover multi-element samples.",
+        "prompt": "packages/bench/bench/tasks/custom/rv-30-zscore-contract/prompt.md",
+        "surface": "contract",
+        "verifier": "packages/bench/bench/tasks/custom/rv-30-zscore-contract/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 6,
+        "id": "rv-31-revert-contract",
+        "loc": 16,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-31-revert-contract/repo",
+        "note": "restore a dropped clamp guard (C2 file-revert trigger); full contract in contract.py, baseline must be restored",
+        "prompt": "packages/bench/bench/tasks/custom/rv-31-revert-contract/prompt.md",
+        "surface": "critic/c2",
+        "verifier": "packages/bench/bench/tasks/custom/rv-31-revert-contract/verify.sh"
+      },
+      {
+        "estimated_min_tool_calls": 8,
+        "id": "rv-32-plan-reopen",
+        "loc": 22,
+        "micro_repo": "packages/bench/bench/tasks/custom/rv-32-plan-reopen/repo",
+        "note": "premature-done trap (C4 plan-deviation trigger): stage_a writes wrong shared field, plan item must be re-opened after B cannot consume it",
+        "prompt": "packages/bench/bench/tasks/custom/rv-32-plan-reopen/prompt.md",
+        "surface": "coordination/c4",
+        "verifier": "packages/bench/bench/tasks/custom/rv-32-plan-reopen/verify.sh"
+      }
+    ]
+  }
+}

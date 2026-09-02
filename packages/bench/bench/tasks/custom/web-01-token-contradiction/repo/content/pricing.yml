@@ -1,0 +1,23 @@
+title: Acme — Pricing
+subtitle: Simple, transparent pricing for every team.
+plans:
+  - name: Starter
+    price: 19
+    interval: month
+    features:
+      - "5 projects"
+      - "Community support"
+  - name: Pro
+    price: 79
+    interval: month
+    features:
+      - "25 projects"
+      - "Priority support"
+      - "Advanced analytics"
+  - name: Enterprise
+    price: 199
+    interval: month
+    features:
+      - "Unlimited projects"
+      - "Dedicated success manager"
+      - "SSO and audit logs"

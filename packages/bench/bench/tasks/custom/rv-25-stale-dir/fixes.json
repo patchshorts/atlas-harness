@@ -1,0 +1,6 @@
+{
+  "file": "repo/assetloader.py",
+  "old_string": "    path = os.path.join(here, \"lib\", \"lib.txt\")",
+  "new_string": "    path = os.path.join(here, \"lib.txt\")",
+  "note": "Stale nested lib/ dir; lib.txt sits beside the module."
+}

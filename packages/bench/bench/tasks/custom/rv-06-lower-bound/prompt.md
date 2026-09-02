@@ -1,0 +1,1 @@
+Implement lower_bound(arr, x) per the repo contract. It must return the FIRST index where arr[i] >= x. The inclusive upper-bound variant in the stub runs one step too far and returns the wrong index on some inputs. All tests must pass.

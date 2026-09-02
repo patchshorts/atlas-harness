@@ -1,0 +1,6 @@
+{
+  "file": "repo/reader.py",
+  "old_string": "    path = os.path.join(here, \"data\", \"tokens.csv\")",
+  "new_string": "    path = os.path.join(here, \"tokens.csv\")",
+  "note": "Stale reference to a nested data/ dir; tokens.csv sits beside the module."
+}

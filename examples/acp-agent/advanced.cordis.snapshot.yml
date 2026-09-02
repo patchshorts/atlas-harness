@@ -1,0 +1,40 @@
+# Replay counterpart to advanced.cordis.yml; only the live model is replaced.
+- id: base
+  name: '@deepseek-ai/cordis-plugin-include'
+  config:
+    path: ./cordis.yml
+    patches:
+      - id: llm-deepseek
+        name: '@atlasai/atsh-llm-deepseek'
+        disabled: true
+      - id: acp-agent
+        name: '@atlasai/atsh-acp-demo'
+        config:
+          provider: deepseek-official
+          model: deepseek-v4-flash
+          persistenceRoot: !!js process.env.ATSH_SNAPSHOT_SESSIONS_ROOT ?? './.sessions'
+          persistenceCompression: 'none'
+          workspaceContext:
+            maxBytes: 65536
+          tools:
+            mode: both
+          persona: |
+            You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}.
+
+            Verify your work by running the code or tests. Keep answers brief and factual.
+      - insert:
+          - id: code-runtime
+            name: '@atlasai/atsh-code-runtime-worker-thread'
+          - id: cordis-host-runner
+            name: '@atlasai/atsh-cordis-host-runner'
+          - id: tool-cordis
+            name: '@atlasai/atsh-tool-cordis'
+          - id: llm-replay
+            name: '@atlasai/atsh-llm-replay'
+            config:
+              providers:
+                - id: deepseek-official
+                  name: DeepSeek
+                  models:
+                    - id: deepseek-v4-flash
+                    - id: deepseek-v4-pro

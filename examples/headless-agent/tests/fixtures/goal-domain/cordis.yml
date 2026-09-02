@@ -1,0 +1,38 @@
+# Test-only composition: create one goal through a Loader-mounted step consumer.
+- id: cli-mock-llm
+  name: '../cli-mock-llm.ts'
+
+# Managed child-process groups for the bash executor (spawn/kill/output plumbing).
+- id: subprocess
+  name: '@atlasai/atsh-subprocess-local'
+
+- id: bash
+  name: '@atlasai/atsh-bash-local'
+
+- id: goal
+  name: '@atlasai/atsh-goal'
+  config:
+    defaultMaxGoalRounds: 11
+
+- id: seed-goal
+  name: './seed-goal.ts'
+
+- id: agent-spine
+  name: '@atlasai/atsh-agent-spine-demo'
+  config:
+    agents:
+      - id: main
+        provider: cli-mock
+        model: cli-mock
+        cwd: !!js process.cwd()
+    persona: 'Test the persisted goal domain.'
+    workspaceContext: false
+
+- id: persistence
+  name: '@atlasai/atsh-session-persistence-jsonl'
+  config:
+    root: './.sessions'
+    compression: none
+
+- id: checkpoint-policy
+  name: '@atlasai/atsh-session-checkpoint-policy'

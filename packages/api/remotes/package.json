@@ -1,0 +1,96 @@
+{
+  "name": "@atlasai/atsh-api-remotes",
+  "description": "Remote BFF assembly and Host Agent/Session lookup policy",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/api/remotes"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "atsh": {
+    "client": {
+      "inject": [
+        "@atlasai/atsh-api-gateway"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/client.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "dependencies": {
+    "@atlasai/atsh-typert-protocol": "workspace:^"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-api-gateway": "workspace:^",
+    "@atlasai/atsh-commands": "workspace:^",
+    "@atlasai/atsh-credentials": "workspace:^",
+    "@atlasai/atsh-goal": "workspace:^",
+    "@atlasai/atsh-cordis-host-runner": "workspace:^",
+    "@atlasai/atsh-host-plugin-inventory": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-agent-presets": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-message-feedback": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-session-persistence": "workspace:^",
+    "@atlasai/atsh-settings": "workspace:^",
+    "@atlasai/atsh-typert-registry": "workspace:^"
+  },
+  "devDependencies": {
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-api-gateway": "workspace:^",
+    "@atlasai/atsh-commands": "workspace:^",
+    "@atlasai/atsh-credentials": "workspace:^",
+    "@atlasai/atsh-goal": "workspace:^",
+    "@atlasai/atsh-cordis-host-runner": "workspace:^",
+    "@atlasai/atsh-host-plugin-inventory": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-agent-presets": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-message-feedback": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-session-persistence": "workspace:^",
+    "@atlasai/atsh-settings": "workspace:^",
+    "@atlasai/atsh-typert-registry": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  }
+}

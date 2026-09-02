@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <entry>
+    <id>http://arxiv.org/abs/2401.00001v1</id>
+    <title>Example paper one</title>
+    <published>2024-01-01T00:00:00Z</published>
+    <author><name>Alice Example</name></author>
+    <author><name>Bob Example</name></author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.00002v2</id>
+    <title>Example paper two</title>
+    <published>2024-02-02T00:00:00Z</published>
+  </entry>
+</feed>

@@ -1,0 +1,6 @@
+{
+  "file": "repo/paging.py",
+  "old_string": "    return [items[i] for i in range(0, len(items), per_page)]",
+  "new_string": "    return [items[i:i + per_page] for i in range(0, len(items), per_page)]",
+  "note": "Slice each window instead of selecting a single element per page."
+}

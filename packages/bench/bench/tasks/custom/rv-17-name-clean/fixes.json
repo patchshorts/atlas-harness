@@ -1,0 +1,6 @@
+{
+  "file": "repo/nameutil.py",
+  "old_string": "    return name.strip()",
+  "new_string": "    return name.strip().lower()",
+  "note": "clean() forgot to lowercase; the caller already delegates correctly."
+}

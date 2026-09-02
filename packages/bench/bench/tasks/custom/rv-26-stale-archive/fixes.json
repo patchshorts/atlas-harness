@@ -1,0 +1,6 @@
+{
+  "file": "repo/resolve.py",
+  "old_string": "    path = os.path.join(here, \"archive\", \"mapping.json\")",
+  "new_string": "    path = os.path.join(here, \"mapping.json\")",
+  "note": "Stale archive/ dir; mapping.json sits beside the module."
+}

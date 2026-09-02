@@ -1,0 +1,6 @@
+{
+  "file": "repo/wrappers.py",
+  "old_string": "    return text[:4] + \"...\"",
+  "new_string": "    if len(text) <= MAX_LEN:\n        return text\n    return text[:MAX_LEN] + \"...\"",
+  "note": "wrap ignored the imported config.MAX_LEN and used a literal; honor the configured value."
+}

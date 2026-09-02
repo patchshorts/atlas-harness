@@ -1,0 +1,76 @@
+{
+  "name": "@atlasai/atsh-client-ui-settings",
+  "description": "Settings domain base plugin: the settings-namespace scope service and the canonical settings slot-type contract",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/client/ui-settings"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "atsh": {
+    "client": {
+      "inject": [
+        "@atlasai/atsh-client-connection",
+        "@atlasai/atsh-client-runtime",
+        "@atlasai/atsh-api-remotes"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-api-remotes": "workspace:^",
+    "@atlasai/atsh-client-connection": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-schema-form": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-settings": "workspace:^",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-api-remotes": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-schema-form": "workspace:^",
+    "@atlasai/atsh-client-test-runtime": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-settings": "workspace:^",
+    "@types/react": "~18.3.1",
+    "react": "^18.2.0"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ]
+}

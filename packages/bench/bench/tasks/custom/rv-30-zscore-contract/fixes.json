@@ -1,0 +1,6 @@
+{
+  "file": "repo/zscore.py",
+  "old_string": "def zscore(sample):\n    n = len(sample)",
+  "new_string": "def zscore(sample):\n    if not sample:\n        raise ValueError(\"empty sample\")\n    if len(sample) == 1:\n        return [None]\n    n = len(sample)",
+  "note": "Contract requires [None] for length-1 and ValueError for empty; visible tests only cover multi-element samples."
+}

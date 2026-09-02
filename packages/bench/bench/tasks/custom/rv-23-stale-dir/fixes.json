@@ -1,0 +1,6 @@
+{
+  "file": "repo/conf_reader.py",
+  "old_string": "    path = os.path.join(here, \"old\", \"conf.json\")",
+  "new_string": "    path = os.path.join(here, \"conf.json\")",
+  "note": "Stale reference to an old/ dir; conf.json sits beside the module."
+}

@@ -1,0 +1,10 @@
+{
+  "arm": "clone",
+  "prices": { "uncachedInputPerMTok": 0.435, "cachedInputPerMTok": 0.0033, "outputPerMTok": 1.2 },
+  "sessions": [
+    { "taskId": "a", "inputTokens": 2000, "cachedInputTokens": 1000, "cacheWriteTokens": 100, "uncachedInputTokens": 2000, "outputTokens": 300, "cacheHitRate": 0.25, "usd": 0.5, "usageEvents": 2, "missingUsageEvents": 0 },
+    { "taskId": "b", "inputTokens": 4000, "cachedInputTokens": 3000, "cacheWriteTokens": 100, "uncachedInputTokens": 4000, "outputTokens": 600, "cacheHitRate": 0.75, "usd": 1.5, "usageEvents": 2, "missingUsageEvents": 0 }
+  ],
+  "meanCostUsd": 1.0,
+  "meanCacheHitRate": 0.5
+}

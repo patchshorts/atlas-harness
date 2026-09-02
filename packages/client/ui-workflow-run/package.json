@@ -1,0 +1,82 @@
+{
+  "name": "@atlasai/atsh-client-ui-workflow-run",
+  "description": "Durable workflow-run Conversation Node and nested member disclosure for atsh web",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/client/ui-workflow-run"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "atsh": {
+    "client": {
+      "inject": [
+        "@atlasai/atsh-client-locale",
+        "@atlasai/atsh-client-runtime",
+        "@atlasai/atsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@atlasai/atsh-client-locale": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-ui-conversation": "workspace:^",
+    "@atlasai/atsh-client-ui-primitives": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-tool-workflow": "workspace:^",
+    "@atlasai/atsh-workflow": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  },
+  "devDependencies": {
+    "@atlasai/atsh-client-locale": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-test-runtime": "workspace:^",
+    "@atlasai/atsh-client-ui-conversation": "workspace:^",
+    "@atlasai/atsh-client-ui-primitives": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-tool-workflow": "workspace:^",
+    "@atlasai/atsh-workflow": "workspace:^",
+    "@types/react": "~18.3.1",
+    "@deepseek-ai/cordis": "workspace:^"
+  }
+}

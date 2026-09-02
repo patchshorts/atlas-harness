@@ -1,0 +1,6 @@
+{
+  "file": "repo/registry.py",
+  "old_string": "    return priority[0]",
+  "new_string": "    return priority[-1]",
+  "note": "pick returned the highest-precedence entry; lowest precedence is the last element."
+}

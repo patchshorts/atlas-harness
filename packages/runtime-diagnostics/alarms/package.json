@@ -1,0 +1,48 @@
+{
+  "name": "@atlasai/atsh-runtime-alarms",
+  "description": "Alarm detectors over the DeepSeek Harness runtime event stream: P-Ratio efficiency collapse, evidence-to-verdict deficit, and repeated-call detection",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/runtime-diagnostics/alarms"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-runtime-events": "workspace:^"
+  },
+  "dependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-runtime-events": "workspace:^"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-runtime-events": "workspace:^"
+  }
+}

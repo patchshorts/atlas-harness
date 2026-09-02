@@ -1,0 +1,44 @@
+{
+  "name": "@atlasai/atsh-factory",
+  "description": "Factory role workflows (ctx.factory): plan-contract registry, deterministic BAR critic scoring, and planner/developer/critic role objectives over the ralph tool",
+  "version": "0.1.0-rc.5",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/factory/factory"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "workspace:^"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-system-prompt": "workspace:^"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-08-16",
+  "lexicon": {
+    "c3_c5_tokens": [
+      "wrong",
+      "incorrect",
+      "mistake",
+      "sorry",
+      "my error",
+      "that failed",
+      "redo",
+      "revert",
+      "undo",
+      "roll back",
+      "retry",
+      "fix it",
+      "fix this",
+      "do not",
+      "dont",
+      "stop",
+      "no",
+      "cancel",
+      "actually",
+      "instead",
+      "not what",
+      "use ... instead",
+      "you missed",
+      "broken",
+      "does not work"
+    ],
+    "exclusions": [
+      "first-attempt failure with no retry (counted in task success, not corrections)",
+      "tool/result error the agent never re-calls (dead end)",
+      "compaction events (assistant/message from a summarizer)",
+      "user messages over 200 chars (task specification text)"
+    ],
+    "frozen": true,
+    "matching": "exact match on lowercase message text (C3 self-correction messages + C5 user corrections)",
+    "source": "benchmark-spec.md §2.2"
+  },
+  "schema_version": "1.0"
+}

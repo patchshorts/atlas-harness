@@ -1,0 +1,6 @@
+{
+  "file": "repo/fees.py",
+  "old_string": "    return weight_kg * 2 + 0.5",
+  "new_string": "    return weight_kg * 2",
+  "note": "Bug is in the fees helper (spurious +0.5), not the order caller."
+}

@@ -1,0 +1,35 @@
+# Minimal keyless composition: real app, bash, and search tool; replayed model.
+- id: llm-replay
+  name: '@atlasai/atsh-llm-replay'
+  config:
+    providers:
+      - id: deepseek-official
+        name: DeepSeek
+        models:
+          - id: deepseek-v4-pro
+
+- id: subprocess
+  name: '@atlasai/atsh-subprocess-local'
+
+- id: bash
+  name: '@atlasai/atsh-bash-local'
+
+- id: acp-agent
+  name: '@atlasai/atsh-acp-demo'
+  config:
+    provider: deepseek-official
+    model: deepseek-v4-pro
+    persistenceRoot: !!js process.env.ATSH_SNAPSHOT_SESSIONS_ROOT ?? './.sessions'
+    persistenceCompression: none
+    workspaceContext: false
+    skills:
+      enabled: false
+    toolJobs: false
+    goals: false
+    persona: You are a concise snapshot agent working in {{cwd}}.
+
+- id: tool-fs-search
+  name: '@atlasai/atsh-tool-fs-search'
+  config:
+    sampleOverCapGlobResults: true
+    globMaxResults: 4

@@ -1,0 +1,12 @@
+{
+  "arm": "clone",
+  "run": "2026-08-16T04:00:00.000Z",
+  "sessions": [
+    { "taskId": "a", "sessionId": "u-c-a", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 40, "toolCalls": 20, "counts": { "C1": 6, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 6, "per100Calls": 30, "hits": [] },
+    { "taskId": "b", "sessionId": "u-c-b", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 20, "toolCalls": 10, "counts": { "C1": 3, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 3, "per100Calls": 30, "hits": [] },
+    { "taskId": "c", "sessionId": "u-c-c", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 20, "toolCalls": 10, "counts": { "C1": 3, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 3, "per100Calls": 30, "hits": [] }
+  ],
+  "meanCorrections": 4,
+  "per100Calls": 30,
+  "successRate": 1
+}

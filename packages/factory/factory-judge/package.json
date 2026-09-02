@@ -1,0 +1,41 @@
+{
+  "name": "@atlasai/atsh-factory-judge",
+  "description": "Pass 4 unanimous three-panel judge (ctx.factoryJudge): pre-commit gate for plans, failure triage, and completion verdicts — decomposition veto, bounded replan loop, votes in the event stream, replan cost in accounting",
+  "version": "0.1.0-rc.5",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/factory/factory-judge"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "workspace:^"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-accounting": "workspace:^"
+  }
+}

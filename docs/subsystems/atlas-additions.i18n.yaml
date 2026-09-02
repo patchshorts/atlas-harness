@@ -1,0 +1,6 @@
+# Bilingual-pair consistency record (docs/i18n/README.md): the git blob hash of each
+# side as of the last confirmed-consistent state. Both languages carry equal authority;
+# after editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/atlas-additions.md
+atlas-additions.md: e6d4ecd6b2d7a1e37e199173ac5fb01c5f1c2e86
+atlas-additions.zh.md: fa241a6ce685f1d15d6d0cf173d02a5d30da73c5

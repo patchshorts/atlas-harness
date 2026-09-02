@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, cite it using the metadata below."
+title: "Atlas Harness (atsh): independent additive harness"
+authors:
+  - family-names: Godwin
+    given-names: Christopher Shaun
+    affiliation: "Independent researcher"
+version: 0.1.0-rc.5-atlas.1
+date-released: "2026-09-01"
+license: MIT
+repository-code: "https://github.com/patchshorts/atlas-harness"
+type: software
+abstract: "An additive capability layer over the DeepSeek Harness: semantic memory, a capability-gated router, an LLM cache, accounting, coordination, a factory critic, a graded loop-guard ladder, a contract-pre-flight tool, a failure-signature memory, and a prompt-lume reducer, added with zero edits to existing packages."
+preferred-citation:
+  type: article
+  title: "What Actually Moves: Five Measured Axes of an Additive Agent Harness"
+  authors:
+    - family-names: Godwin
+      given-names: Christopher Shaun
+      affiliation: "Independent researcher"
+  year: 2026
+  notes: "Companion paper; sources in docs/paper/ of this repository."
+

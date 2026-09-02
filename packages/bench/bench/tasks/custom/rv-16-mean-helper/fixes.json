@@ -1,0 +1,6 @@
+{
+  "file": "repo/metrics.py",
+  "old_string": "    return sum(values) // len(values)",
+  "new_string": "    return sum(values) / len(values)",
+  "note": "Integer division truncates the mean to an int; needs true division."
+}

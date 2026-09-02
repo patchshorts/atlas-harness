@@ -1,0 +1,6 @@
+{
+  "file": "repo/merge.py",
+  "old_string": "def merge_dict(a, b):\n    for k, v in b.items():\n        a[k] = v\n    return a",
+  "new_string": "def merge_dict(a, b):\n    merged = {k: v for k, v in a.items()}\n    for k, v in b.items():\n        merged[k] = v\n    return merged",
+  "note": "Writing into the caller's `a` mutates it; copy before overlaying b."
+}

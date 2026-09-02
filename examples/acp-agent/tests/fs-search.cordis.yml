@@ -1,0 +1,32 @@
+# Minimal live counterpart for the glob-sampling snapshot composition.
+- id: llm-deepseek
+  name: '@atlasai/atsh-llm-deepseek'
+  config:
+    models:
+      - id: deepseek-v4-pro
+
+- id: subprocess
+  name: '@atlasai/atsh-subprocess-local'
+
+- id: bash
+  name: '@atlasai/atsh-bash-local'
+
+- id: acp-agent
+  name: '@atlasai/atsh-acp-demo'
+  config:
+    provider: deepseek-official
+    model: deepseek-v4-pro
+    persistenceRoot: !!js process.env.ATSH_SNAPSHOT_SESSIONS_ROOT ?? './.sessions'
+    persistenceCompression: !!js "process.env.ATSH_SNAPSHOT === undefined ? 'zstd' : 'none'"
+    workspaceContext: false
+    skills:
+      enabled: false
+    toolJobs: false
+    goals: false
+    persona: You are a concise snapshot agent working in {{cwd}}.
+
+- id: tool-fs-search
+  name: '@atlasai/atsh-tool-fs-search'
+  config:
+    sampleOverCapGlobResults: true
+    globMaxResults: 4

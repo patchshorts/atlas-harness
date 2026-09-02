@@ -1,0 +1,6 @@
+{
+  "file": "repo/rotate.py",
+  "old_string": "    return items[k:] + items[:k]",
+  "new_string": "    if not items:\n        return []\n    n = len(items)\n    k %= n\n    return items[-k:] + items[:-k]",
+  "note": "The stub rotates LEFT instead of RIGHT and mishandles k > len; rotate right and normalize k."
+}

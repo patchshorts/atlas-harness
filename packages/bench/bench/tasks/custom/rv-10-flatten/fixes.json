@@ -1,0 +1,6 @@
+{
+  "file": "repo/flatten.py",
+  "old_string": "def flatten(xs):\n    return [x for sub in xs for x in sub]",
+  "new_string": "def flatten(xs):\n    out = []\n    for x in xs:\n        if isinstance(x, list):\n            out.extend(flatten(x))\n        else:\n            out.append(x)\n    return out",
+  "note": "One-level comprehension leaves nested lists; recurse into sub-lists."
+}

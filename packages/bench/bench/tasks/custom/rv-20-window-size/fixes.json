@@ -1,0 +1,6 @@
+{
+  "file": "repo/aggregate.py",
+  "old_string": "    k = 2\n    return sum(values[-k:]) / k if values else 0",
+  "new_string": "    k = min(WINDOW, len(values)) if values else 0\n    return sum(values[-k:]) / k if values else 0",
+  "note": "rolling_mean hardcoded k=2 instead of using the imported WINDOW; honor the config."
+}

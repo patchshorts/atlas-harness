@@ -1,0 +1,20 @@
+# Acme — investor update contacts
+
+update:
+  - name: Amelia Foster
+    role: Head of Investor Relations
+    email: afoster@acme.io
+  - name: Diego Ruiz
+    role: Board Observer
+    email: druiz@acme.io
+
+board:
+  - name: Priya Nair
+    role: Chairperson
+    email: priya.nair@acme.io
+  - name: Marcus Bell
+    role: Director
+    email: marcus.bell@acme.io
+
+office:
+  - name: Acme Investors <investors@acme.io>

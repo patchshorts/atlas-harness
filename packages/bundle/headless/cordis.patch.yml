@@ -1,0 +1,61 @@
+# The dsh-headless bundle patch: one-shot task mode directly over dsh-base.
+# It mounts no Host, HTTP server, Web runtime, or browser plugin. An ordinary
+# provider plugin injects `cmdlineArgs`, parses the task positional
+# (`atsh --profile headless "<task>"`) and this app's --help, then the direct
+# driver creates an Agent through the core registry and prints its durable result.
+
+- id: system-prompt
+  config:
+    persona: >-
+      You are a coding agent powered by the {{model}} model. Your working directory is {{cwd}}.
+
+# The shared module-reload HMR row stays off; the launcher's watch-only
+# fallback still keeps the user patch layers live until the run exits.
+- id: hmr
+  disabled: true
+
+- id: tools
+  config:
+    # Keep the same temporary process-wide Code Mode opt-in as the Web surface.
+    mode: !!js process.env.ATSH_TOOLS_MODE
+
+# Prompt-lume reducer suite: mounted host-plane in the BASE bundle,
+# so it is default-ON for every surface that composes base, headless included.
+# The headless profile = base + this bundle, so these rows no longer insert
+# here — a second insert of the same ids would double-mount. The base rows
+# carry the same memory→corpus→lume→trim→prime order and the prime's root.
+# See packages/bundle/base/cordis.patch.yml.
+
+# Supersede path: agent-instructions' truncate-to-fit instruction wall is
+# replaced by prompt-lume's retrieval-selection on this additive harness. The
+# base row is disabled here (additive arm only); the clamp arm (bench-clone
+# harness) keeps it and renders the full instruction wall.
+- id: agent-instructions
+  disabled: true
+
+- insert:
+    # Code Mode is a core execution capability, not a Web component.
+    - id: code-runtime
+      name: '@atlasai/atsh-code-runtime-worker-thread'
+
+    - id: headless-startup
+      name: '@atlasai/atsh-headless/startup'
+
+    # Reads its task from the ordinary headlessStartup provider.
+    - id: headless-runner
+      name: '@atlasai/atsh-headless'
+      inject: [headlessStartup]
+      config:
+        task: !!js ctx.headlessStartup.task
+
+# the prior workstream token-efficiency fix (F1): the skill-corpus additive (mounted in
+# base cordis.patch.yml) populates the corpus at Harbor/headless runtime,
+# which drives tool-skill to inject a ~2,751-token <available_skills>
+# system-reminder into the durable session prefix on EVERY request (+42,807
+# billed vs vanilla on Run 2). No headless Harbor task invokes a skill. With
+# zero model-invocable skills, tool-skill's publish gate (index.ts:237) skips
+# the catalog message entirely. Disable the corpus for the headless profile
+# here (the LAST write per row wins); the base bundle keeps it mounted for
+# non-headless surfaces.
+- id: skill-corpus
+  disabled: true

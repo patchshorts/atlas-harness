@@ -1,0 +1,24 @@
+# Keyless opt-in PTY composition for the headless stream-json snapshot.
+- id: base
+  name: '@deepseek-ai/cordis-plugin-include'
+  config:
+    path: ./cordis.yml
+    patches:
+      - id: llm-deepseek
+        name: '@atlasai/atsh-llm-deepseek'
+        disabled: true
+      - insert:
+          - id: sandbox-policy
+            name: '@atlasai/atsh-sandbox-policy'
+            config:
+              mode: danger-full-access
+          - id: pty
+            name: '@atlasai/atsh-terminal'
+          - id: pty-snapshot-backend
+            name: '../acp-agent/pty-snapshot-backend.mjs'
+          - id: tool-terminal
+            name: '@atlasai/atsh-tool-terminal'
+            config:
+              maxResultBytes: 64
+          - id: llm-replay
+            name: '@atlasai/atsh-llm-replay'

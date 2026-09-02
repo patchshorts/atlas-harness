@@ -1,0 +1,90 @@
+{
+  "name": "@atlasai/atsh-client-ui-theme",
+  "description": "Theme plugin: Host bootstrap for the pre-plugin palette; DOM-free ThemeRuntime for light/dark/system state; --dsw-* token styles and Appearance settings row",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/client/ui-theme"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./styles/*": "./lib/styles/*",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "atsh": {
+    "client": {
+      "inject": [
+        "@atlasai/atsh-client-connection",
+        "@atlasai/atsh-client-runtime",
+        "@atlasai/atsh-client-locale",
+        "@atlasai/atsh-client-ui-settings",
+        "@atlasai/atsh-api-remotes"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-api-remotes": "workspace:^",
+    "@atlasai/atsh-client-connection": "workspace:^",
+    "@atlasai/atsh-client-locale": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-ui-primitives": "workspace:^",
+    "@atlasai/atsh-client-ui-settings": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-host-webserver": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-api-remotes": "workspace:^",
+    "@atlasai/atsh-client-locale": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-test-runtime": "workspace:^",
+    "@atlasai/atsh-client-ui-primitives": "workspace:^",
+    "@atlasai/atsh-client-ui-settings": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-host-webserver": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@types/react": "~18.3.1",
+    "react": "^18.2.0"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/client.js",
+    "lib/styles",
+    "lib/types/**/*.d.ts"
+  ],
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "dependencies": {
+    "@atlasai/atsh-settings": "workspace:^",
+    "clsx": "^2.0.0",
+    "@deepseek-ai/schemastery": "workspace:^"
+  }
+}

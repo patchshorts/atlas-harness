@@ -1,0 +1,10 @@
+{
+  "arm": "additive",
+  "prices": { "uncachedInputPerMTok": 0.435, "cachedInputPerMTok": 0.0033, "outputPerMTok": 1.2 },
+  "sessions": [
+    { "taskId": "a", "inputTokens": 1000, "cachedInputTokens": 500, "cacheWriteTokens": 50, "uncachedInputTokens": 1000, "outputTokens": 150, "cacheHitRate": 0.5, "usd": 0.25, "usageEvents": 2, "missingUsageEvents": 0 },
+    { "taskId": "b", "inputTokens": 3000, "cachedInputTokens": 1500, "cacheWriteTokens": 50, "uncachedInputTokens": 3000, "outputTokens": 450, "cacheHitRate": 0.9, "usd": 0.75, "usageEvents": 2, "missingUsageEvents": 0 }
+  ],
+  "meanCostUsd": 0.5,
+  "meanCacheHitRate": 0.7
+}

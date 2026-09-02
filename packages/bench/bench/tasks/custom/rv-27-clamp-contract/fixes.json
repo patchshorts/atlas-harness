@@ -1,0 +1,6 @@
+{
+  "file": "repo/clamp.py",
+  "old_string": "def clamp(value, lo, hi):\n    if value < lo:",
+  "new_string": "def clamp(value, lo, hi):\n    if hi < lo:\n        raise ValueError(\"hi must be >= lo\")\n    if value < lo:",
+  "note": "The docstring contract requires ValueError on inverted bounds; the visible tests never exercised it."
+}

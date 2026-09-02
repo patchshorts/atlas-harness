@@ -1,0 +1,6 @@
+{
+  "file": "repo/unique.py",
+  "old_string": "    return list(set(items))",
+  "new_string": "    seen = set()\n    out = []\n    for it in items:\n        if it not in seen:\n            seen.add(it)\n            out.append(it)\n    return out",
+  "note": "set() drops duplicates but loses first-seen order; use a seen-guard scan."
+}

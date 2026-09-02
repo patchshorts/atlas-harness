@@ -1,0 +1,6 @@
+{
+  "file": "repo/tally.py",
+  "old_string": "            counts[ch] = counts.get(ch, 0) + 1",
+  "new_string": "            key = ch.lower()\n            counts[key] = counts.get(key, 0) + 1",
+  "note": "Tally is case-sensitive; fold keys to lowercase."
+}

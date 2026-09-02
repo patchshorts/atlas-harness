@@ -1,0 +1,6 @@
+{
+  "file": "repo/tax.py",
+  "old_string": "    return round(price * (1 + 0.08), 2)",
+  "new_string": "    return round(price * (1 + RATE), 2)",
+  "note": "total hardcoded 8% instead of importing the authoritative RATE from rate.py."
+}

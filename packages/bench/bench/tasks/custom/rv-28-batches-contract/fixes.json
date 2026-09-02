@@ -1,0 +1,6 @@
+{
+  "file": "repo/batches.py",
+  "old_string": "def batches(total, size):\n    full, rem = divmod(total, size)",
+  "new_string": "def batches(total, size):\n    if size <= 0:\n        raise ValueError(\"size must be positive\")\n    full, rem = divmod(total, size)",
+  "note": "The docstring contract requires ValueError when size <= 0; the happy-path tests never exercise it."
+}

@@ -1,0 +1,106 @@
+{
+  "name": "@atlasai/atsh-subagent",
+  "description": "Abstract subagent seam (ctx.subagents): named-provider registry for delegating to child agents",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/subagent/subagent"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client.d.ts",
+      "default": "./lib/types/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-agent-presets": "workspace:^",
+    "@atlasai/atsh-brand": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-sandbox": "workspace:^",
+    "@atlasai/atsh-sandbox-policy": "workspace:^",
+    "@atlasai/atsh-scope": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-session-persistence": "workspace:^",
+    "@atlasai/atsh-session-projection": "workspace:^",
+    "@atlasai/atsh-session-projection-cache": "workspace:^",
+    "@atlasai/atsh-jobs": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^",
+    "@atlasai/atsh-user-approval": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  },
+  "peerDependenciesMeta": {
+    "@atlasai/atsh-agent-presets": {
+      "optional": true
+    },
+    "@atlasai/atsh-sandbox": {
+      "optional": true
+    },
+    "@atlasai/atsh-sandbox-policy": {
+      "optional": true
+    },
+    "@atlasai/atsh-session-persistence": {
+      "optional": true
+    },
+    "@atlasai/atsh-session-projection": {
+      "optional": true
+    },
+    "@atlasai/atsh-session-projection-cache": {
+      "optional": true
+    },
+    "@atlasai/atsh-jobs": {
+      "optional": true
+    },
+    "@atlasai/atsh-user-approval": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-agent-presets": "workspace:^",
+    "@atlasai/atsh-brand": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-sandbox": "workspace:^",
+    "@atlasai/atsh-sandbox-policy": "workspace:^",
+    "@atlasai/atsh-scope": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-session-persistence": "workspace:^",
+    "@atlasai/atsh-session-projection": "workspace:^",
+    "@atlasai/atsh-session-projection-cache": "workspace:^",
+    "@atlasai/atsh-storage": "workspace:^",
+    "@atlasai/atsh-storage-domain": "workspace:^",
+    "@atlasai/atsh-jobs": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^",
+    "@atlasai/atsh-user-approval": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  }
+}

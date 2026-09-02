@@ -1,0 +1,83 @@
+{
+  "name": "@atlasai/atsh-plan-mode",
+  "description": "Logged per-agent plan mode with deployment guidance, a direct slash command, and a user-reviewed exit",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/plan/plan-mode"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./client": {
+      "types": "./lib/types/client.d.ts",
+      "default": "./lib/types/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-commands": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-session-projection": "workspace:^",
+    "@atlasai/atsh-system-prompt": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^",
+    "@atlasai/atsh-user-questions": "workspace:^",
+    "@atlasai/atsh-judge-gate": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  },
+  "peerDependenciesMeta": {
+    "@atlasai/atsh-commands": {
+      "optional": true
+    },
+    "@atlasai/atsh-judge-gate": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-agent-loop": "workspace:^",
+    "@atlasai/atsh-code-runtime": "workspace:^",
+    "@atlasai/atsh-commands": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-session-projection": "workspace:^",
+    "@atlasai/atsh-system-prompt": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^",
+    "@atlasai/atsh-user-questions": "workspace:^",
+    "@atlasai/atsh-factory-judge": "workspace:^",
+    "@atlasai/atsh-judge-gate": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  }
+}

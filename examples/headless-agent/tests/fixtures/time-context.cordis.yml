@@ -1,0 +1,33 @@
+# Test-only composition: keep time-context opt-in while exercising its real Loader/app path.
+- id: time-context-mock-llm
+  name: './time-context-mock-llm.ts'
+
+# Managed child-process groups for the bash executor (spawn/kill/output plumbing).
+- id: subprocess
+  name: '@atlasai/atsh-subprocess-local'
+
+- id: bash
+  name: '@atlasai/atsh-bash-local'
+
+- id: time-context
+  name: '@atlasai/atsh-time-context'
+
+- id: agent-spine
+  name: '@atlasai/atsh-agent-spine-demo'
+  config:
+    agents:
+      - id: main
+        provider: time-context-mock
+        model: time-context-mock
+        cwd: !!js process.cwd()
+    persona: 'Test the time-context plugin.'
+    workspaceContext: false
+
+- id: persistence
+  name: '@atlasai/atsh-session-persistence-jsonl'
+  config:
+    root: './.sessions'
+    compression: 'none'
+
+- id: checkpoint-policy
+  name: '@atlasai/atsh-session-checkpoint-policy'

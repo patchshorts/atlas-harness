@@ -1,0 +1,63 @@
+{
+  "name": "@atlasai/atsh-session-log-export",
+  "description": "Web Session-log export command and shared download dialog",
+  "version": "0.1.0-rc.5",
+  "publishConfig": { "access": "public" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/session-query/session-log-export"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": { "types": "./lib/types/index.d.ts", "default": "./lib/index.js" },
+    "./invariant": { "types": "./lib/types/invariant.d.ts", "default": "./lib/invariant.js" },
+    "./client": { "types": "./lib/types/client/index.d.ts", "default": "./lib/client.js" },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib/index.js", "lib/invariant.js", "lib/client.js", "lib/types/**/*.d.ts"],
+  "scripts": { "bundle": "tsdown", "watch": "tsdown --watch" },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-client-locale": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-ui-commands": "workspace:^",
+    "@atlasai/atsh-client-ui-conversation": "workspace:^",
+    "@atlasai/atsh-client-ui-primitives": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-commands": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:^",
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-client-locale": "workspace:^",
+    "@atlasai/atsh-client-runtime": "workspace:^",
+    "@atlasai/atsh-client-ui-commands": "workspace:^",
+    "@atlasai/atsh-client-ui-conversation": "workspace:^",
+    "@atlasai/atsh-client-ui-primitives": "workspace:^",
+    "@atlasai/atsh-client-ui-slots": "workspace:^",
+    "@atlasai/atsh-commands": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@types/react": "~18.3.1",
+    "react": "^18.2.0"
+  },
+  "atsh": {
+    "client": {
+      "inject": [
+        "@atlasai/atsh-client-locale",
+        "@atlasai/atsh-client-runtime",
+        "@atlasai/atsh-client-ui-commands",
+        "@atlasai/atsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  }
+}

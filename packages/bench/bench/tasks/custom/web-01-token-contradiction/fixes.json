@@ -1,0 +1,6 @@
+{
+  "file": "repo/tokens.css",
+  "old_string": "  --color-accent: #7C3AED;",
+  "new_string": "  --color-accent: #7C3AED;\n  --color-promo: #FF3B30;",
+  "note": "Turn 2 asks for the literal #FF3B30, which BRAND.md forbids in markup. The sanctioned mechanism is: add a --color-promo token to tokens.css, then reference it from the banner. (Second half of the fix: components/promo-banner.html must reference var(--color-promo) for its background instead of a literal hex.) Two edits, both part of the single correct resolution."
+}

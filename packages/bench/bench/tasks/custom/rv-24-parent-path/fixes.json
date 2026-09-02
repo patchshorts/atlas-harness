@@ -1,0 +1,6 @@
+{
+  "file": "repo/fileload.py",
+  "old_string": "    path = os.path.join(here, \"..\", \"rows.txt\")",
+  "new_string": "    path = os.path.join(here, \"rows.txt\")",
+  "note": "Wrong parent (..) reference; rows.txt lives beside the module."
+}

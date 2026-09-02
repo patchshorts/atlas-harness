@@ -1,0 +1,43 @@
+{
+  "name": "@atlasai/atsh-factory-lane-guard",
+  "description": "Fix 12/6 lane separation + injection defense (ctx.laneGuard): channel-based instruction marking, tool-call allowlist at the harness boundary, PromptArmor-pattern sanitization pass, taint-aware verification for the in-band class — never mutates the session log or message history (golden rule)",
+  "version": "0.1.0-rc.5",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/factory/factory-lane-guard"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "workspace:^"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-system-prompt": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "file": "repo/indent.py",
+  "old_string": "    return \"  \" * (level - 1)",
+  "new_string": "    return \"  \" * level",
+  "note": "Off-by-one: level 2 should produce 4 spaces, not 2."
+}

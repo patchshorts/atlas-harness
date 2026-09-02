@@ -1,0 +1,6 @@
+{
+  "file": "repo/loader.py",
+  "old_string": "    path = os.path.join(here, \"configs\", \"settings.json\")",
+  "new_string": "    path = os.path.join(here, \"settings.json\")",
+  "note": "Stale reference to configs/settings.json; settings.json sits directly beside the module."
+}

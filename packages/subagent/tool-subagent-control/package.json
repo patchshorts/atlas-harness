@@ -1,0 +1,62 @@
+{
+  "name": "@atlasai/atsh-tool-subagent-control",
+  "description": "Globally named send_message, interrupt_agent, and list_agents tools over ctx.subagents continuations",
+  "version": "0.1.0-rc.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "directory": "packages/subagent/tool-subagent-control"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./list-agents": {
+      "types": "./lib/types/list-agents.d.ts",
+      "default": "./lib/types/list-agents.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-subagent": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  },
+  "devDependencies": {
+    "@atlasai/atsh-agent": "workspace:^",
+    "@atlasai/atsh-agent-loop": "workspace:^",
+    "@atlasai/atsh-agent-loop-testkit": "workspace:^",
+    "@atlasai/atsh-invariants": "workspace:^",
+    "@atlasai/atsh-llm": "workspace:^",
+    "@atlasai/atsh-session": "workspace:^",
+    "@atlasai/atsh-session-persistence": "workspace:^",
+    "@atlasai/atsh-session-persistence-jsonl": "workspace:^",
+    "@atlasai/atsh-session-projection": "workspace:^",
+    "@atlasai/atsh-subagent": "workspace:^",
+    "@atlasai/atsh-subagent-spawn-in-process": "workspace:^",
+    "@atlasai/atsh-tools": "workspace:^",
+    "@deepseek-ai/cordis": "workspace:^"
+  }
+}

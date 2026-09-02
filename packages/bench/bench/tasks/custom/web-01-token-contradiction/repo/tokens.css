@@ -1,0 +1,47 @@
+/* Acme design tokens — the ONLY sanctioned home for colours on the site.
+   
+   Every colour used in rendered markup MUST be one of these tokens (or a
+   token added here). No literal colour values may appear in components/ or
+   in the rendered HTML.
+*/
+
+:root {
+  --color-bg: #FFFFFF;
+  --color-text: #1A1A1A;
+  --color-muted: #6B7075;
+  --color-border: #E4E7EB;
+  --color-primary: #1E6FE0;
+  --color-success: #1E8E3E;
+  --color-warn: #C9A52E;
+  --color-accent: #7C3AED;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --radius: 0.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: var(--space-lg); }
+
+.site-header { border-bottom: 1px solid var(--color-border); }
+
+.nav { display: flex; gap: var(--space-lg); padding: var(--space-md) 0; }
+
+.hero { padding: var(--space-lg) 0; }
+
+.plan-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+}
+.plan-price { font-size: 1.75rem; font-weight: 700; color: var(--color-primary); }
+
+.promo { padding: var(--space-md) var(--space-lg); }

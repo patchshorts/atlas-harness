@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-08-16",
+  "lexicon": {
+    "c3_c5_tokens": [
+      "wrong",
+      "redo"
+    ],
+    "frozen": false,
+    "matching": "exact match on lowercase message text (C3 self-correction messages + C5 user corrections)",
+    "source": "benchmark-spec.md §2.2"
+  },
+  "schema_version": "1.0"
+}

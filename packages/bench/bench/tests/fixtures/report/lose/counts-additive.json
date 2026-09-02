@@ -1,0 +1,14 @@
+{
+  "arm": "additive",
+  "run": "2026-08-16T03:00:00.000Z",
+  "sessions": [
+    { "taskId": "t1", "sessionId": "l-a-t1", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 40, "toolCalls": 20, "counts": { "C1": 4, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 4, "per100Calls": 20, "hits": [] },
+    { "taskId": "t2", "sessionId": "l-a-t2", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 30, "toolCalls": 15, "counts": { "C1": 3, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 3, "per100Calls": 20, "hits": [] },
+    { "taskId": "t3", "sessionId": "l-a-t3", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 50, "toolCalls": 25, "counts": { "C1": 5, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 5, "per100Calls": 20, "hits": [] },
+    { "taskId": "t4", "sessionId": "l-a-t4", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 20, "toolCalls": 10, "counts": { "C1": 2, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 2, "per100Calls": 20, "hits": [] },
+    { "taskId": "t5", "sessionId": "l-a-t5", "exitCode": 0, "timedOut": false, "taskSuccess": true, "events": 40, "toolCalls": 20, "counts": { "C1": 4, "C2": 0, "C3": 0, "C4": 0, "C5": 0 }, "total": 4, "per100Calls": 20, "hits": [] }
+  ],
+  "meanCorrections": 3.6,
+  "per100Calls": 20,
+  "successRate": 1
+}
