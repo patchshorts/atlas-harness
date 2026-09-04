@@ -1,0 +1,2187 @@
+{
+  "arm": "additive",
+  "run": "2026-08-25T13:52:56.195Z",
+  "sessions": [
+    {
+      "taskId": "mem-1-config-drift",
+      "sessionId": "session-ccee4cb8-adcd-4dc8-aa8c-de378365511f",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 375,
+      "toolCalls": 12,
+      "counts": {
+        "C1": 2,
+        "C2": 3,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 6,
+      "per100Calls": 50,
+      "hits": [
+        {
+          "class": "C1",
+          "seq": 152,
+          "note": "retry of edit within 4 events of erroring result (seq 151)"
+        },
+        {
+          "class": "C1",
+          "seq": 154,
+          "note": "retry of edit within 4 events of erroring result (seq 153)"
+        },
+        {
+          "class": "C2",
+          "seq": 266,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/mem-1-config-drift/sandbox/svc_c.py to earlier content"
+        },
+        {
+          "class": "C2",
+          "seq": 268,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/mem-1-config-drift/sandbox/svc_d.py to earlier content"
+        },
+        {
+          "class": "C2",
+          "seq": 270,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/mem-1-config-drift/sandbox/svc_e.py to earlier content"
+        },
+        {
+          "class": "C3",
+          "seq": 372,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 10,
+          "wastedCalls": 6,
+          "wasteRatio": 0.6
+        }
+      ]
+    },
+    {
+      "taskId": "mem-2-convention-consistency",
+      "sessionId": "session-2a6554d1-0840-4c0e-b80e-0d9fd9c2700c",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 536,
+      "toolCalls": 15,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 10,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2
+        }
+      ]
+    },
+    {
+      "taskId": "mem-3-state-recall",
+      "sessionId": "session-09698826-ae89-4628-a084-f0625860f4dd",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 212,
+      "toolCalls": 5,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 4,
+          "wastedCalls": 1,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "mem-4-parallel-fix",
+      "sessionId": "session-c644d424-f2a8-4451-90aa-ae6604a5b129",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 296,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 0,
+          "wasteRatio": 0
+        }
+      ]
+    },
+    {
+      "taskId": "mem-5-dependency-matrix",
+      "sessionId": "session-dc1f0175-d220-481e-a7e9-65b7a39134ae",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 275,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 28.57,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 191,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/mem-5-dependency-matrix/sandbox/DEPENDENCIES.md to earlier content"
+        },
+        {
+          "class": "C3",
+          "seq": 272,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 6,
+          "wasteRatio": 0.8571428571428571
+        }
+      ]
+    },
+    {
+      "taskId": "res-1-arxiv-client",
+      "sessionId": "session-92cda1f4-5daf-412d-b4da-f645136d79da",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 702,
+      "toolCalls": 14,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 13,
+          "wastedCalls": 3,
+          "wasteRatio": 0.23076923076923078
+        }
+      ]
+    },
+    {
+      "taskId": "res-2-pydantic-v2",
+      "sessionId": "session-de05abbb-1e77-47cd-9d4c-d79d9aba2009",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 385,
+      "toolCalls": 10,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 1,
+          "wasteRatio": 0.125
+        }
+      ]
+    },
+    {
+      "taskId": "crit-1-plan-follow",
+      "sessionId": "session-442618ef-9b53-47a4-8bc9-621b8253407a",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 593,
+      "toolCalls": 13,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 7.69,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 590,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 4,
+          "wasteRatio": 0.5
+        }
+      ]
+    },
+    {
+      "taskId": "crit-2-todo-contract",
+      "sessionId": "session-a8ddf040-73ab-4494-b003-41e6c49978de",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 365,
+      "toolCalls": 9,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 6,
+          "wastedCalls": 0,
+          "wasteRatio": 0
+        }
+      ]
+    },
+    {
+      "taskId": "coord-1-subtask-handoff",
+      "sessionId": "session-4884912c-1fde-4115-90a1-80d0e2e7e190",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 279,
+      "toolCalls": 6,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 16.67,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 178,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/coord-1-subtask-handoff/sandbox/pipeline.py to earlier content"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 6,
+          "wastedCalls": 2,
+          "wasteRatio": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-01-merge-offbyone",
+      "sessionId": "session-fd028b7b-ad46-4265-8a1e-3e49b45a911d",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 185,
+      "toolCalls": 5,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 20,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 182,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 2,
+          "wasteRatio": 0.4
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-03-encoding-trap",
+      "sessionId": "session-75f54b9c-876e-42cc-8397-ba182e70edcf",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 248,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-04-timezone-trap",
+      "sessionId": "session-ef472f9e-7db9-4f3e-87e6-1c4af9a540c7",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 200,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 14.29,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 197,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-05-mutable-default",
+      "sessionId": "session-f58c44d1-7769-40bd-b86c-12c494cf9ef4",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 228,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 2,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 28.57,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 170,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 225,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-06-shadow-builtin",
+      "sessionId": "session-0963fd77-78de-49d5-af33-21eda1e74490",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 262,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 14.29,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 184,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/dbg-06-shadow-builtin/sandbox/transform.py to earlier content"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-07-exception-contract",
+      "sessionId": "session-2ba06b64-b408-4508-8b9b-3ab702c23543",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 158,
+      "toolCalls": 5,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 2,
+          "wasteRatio": 0.4
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-08-loop-step",
+      "sessionId": "session-74baf013-a6b3-47ca-8615-a3551757cecd",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 187,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-09-parse-currency",
+      "sessionId": "session-b6cc7cd2-06f9-44b0-99e7-6e80864cda3c",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 513,
+      "toolCalls": 15,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 2,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 13.33,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 200,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 510,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 15,
+          "wastedCalls": 12,
+          "wasteRatio": 0.8
+        }
+      ]
+    },
+    {
+      "taskId": "dbg-10-cache-stale",
+      "sessionId": "session-f308e2c2-9d51-433f-a7d2-81d62a71fee9",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 228,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 6,
+          "wastedCalls": 2,
+          "wasteRatio": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "taskId": "ref-01-api-migration",
+      "sessionId": "session-b1870bf3-f214-4170-a75c-258bc02775f8",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 237,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 1,
+          "wasteRatio": 0.2
+        }
+      ]
+    },
+    {
+      "taskId": "ref-02-import-upgrade",
+      "sessionId": "session-9424552d-23d2-47fa-87a3-40fc490d1824",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 303,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 12.5,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 300,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "ref-03-config-schema",
+      "sessionId": "session-78c70cf1-adc7-4201-a4a4-380a11094f3f",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 401,
+      "toolCalls": 13,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 10,
+          "wastedCalls": 1,
+          "wasteRatio": 0.1
+        }
+      ]
+    },
+    {
+      "taskId": "grn-01-state-machine",
+      "sessionId": "session-91e9be80-5970-41df-a213-9555f966f5c0",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 215,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 12.5,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 212,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "grn-02-quoted-csv",
+      "sessionId": "session-638148fa-22e1-4353-85c3-6cd1d666cb9f",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 189,
+      "toolCalls": 5,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 4,
+          "wastedCalls": 1,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "grn-03-token-bucket",
+      "sessionId": "session-2c43429f-98da-41b6-8fda-83a8b0a3a97e",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 203,
+      "toolCalls": 5,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 4,
+          "wastedCalls": 1,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "mem-06-precedence-trap",
+      "sessionId": "session-54cf791f-6bb2-4559-a63e-4edacfb98087",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 276,
+      "toolCalls": 10,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 6,
+          "wastedCalls": 1,
+          "wasteRatio": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "taskId": "mem-07-shared-client",
+      "sessionId": "session-cc35a0ce-6d9b-40be-93cf-3c1e191e0ba2",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 214,
+      "toolCalls": 6,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 16.67,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 161,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/mem-07-shared-client/sandbox/service_a.py to earlier content"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 6,
+          "wastedCalls": 2,
+          "wasteRatio": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "taskId": "res-03-schema-verify",
+      "sessionId": "session-3889baec-f8d0-4574-abf5-985dfba36886",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 275,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 14.29,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 204,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/res-03-schema-verify/sandbox/validator.py to earlier content"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "crit-03-todo-honesty",
+      "sessionId": "session-e2902749-e78e-4ed2-af12-e1c0e6ee9dc9",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 166,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 1,
+          "wasteRatio": 0.2
+        }
+      ]
+    },
+    {
+      "taskId": "coord-02-artifact-schema",
+      "sessionId": "session-a5313b38-e217-42dd-bff3-8813bf119b88",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 280,
+      "toolCalls": 6,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 33.33,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 183,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/coord-02-artifact-schema/sandbox/worker_b.py to earlier content"
+        },
+        {
+          "class": "C3",
+          "seq": 277,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 6,
+          "wastedCalls": 2,
+          "wasteRatio": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "taskId": "hrd-01-iterative-repair",
+      "sessionId": "session-57c25803-9f44-45a9-95ce-4798f0a1a285",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 463,
+      "toolCalls": 11,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 11,
+          "wastedCalls": 2,
+          "wasteRatio": 0.18181818181818182
+        }
+      ]
+    },
+    {
+      "taskId": "hrd-02-cross-turn-memory",
+      "sessionId": "session-81dbfc87-5d31-4127-9458-17d8d8cd6cbf",
+      "exitCode": 1,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 1160,
+      "toolCalls": 36,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 35,
+          "wastedCalls": 0,
+          "wasteRatio": 0
+        }
+      ]
+    },
+    {
+      "taskId": "hrd-03-plan-discipline",
+      "sessionId": "session-731d0c6f-07c5-4d1c-9d83-a14350c6e799",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 720,
+      "toolCalls": 21,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 16,
+          "wastedCalls": 0,
+          "wasteRatio": 0
+        }
+      ]
+    },
+    {
+      "taskId": "trv-01-trivial-turn",
+      "sessionId": "session-8066154c-6eb5-4467-aaf8-d2fd9da2db54",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 23,
+      "toolCalls": 0,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": []
+    },
+    {
+      "taskId": "web-01-token-contradiction",
+      "sessionId": "session-e413d8fc-2708-44fe-b3b0-7bb51c2de496",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 886,
+      "toolCalls": 18,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 2,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 3,
+      "per100Calls": 16.67,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 451,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/web-01-token-contradiction/sandbox/components/promo-banner.html to earlier content"
+        },
+        {
+          "class": "C3",
+          "seq": 762,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 883,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 15,
+          "wastedCalls": 5,
+          "wasteRatio": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "taskId": "mail-01-superseded-figures",
+      "sessionId": "session-1eabcce1-2ce7-437b-bd37-b9e27b4fefad",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 704,
+      "toolCalls": 22,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 9,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "taskId": "fin-01-effective-rate",
+      "sessionId": "session-9e0024bc-f010-42f3-bf3b-83e02a05f25e",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 580,
+      "toolCalls": 10,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 3,
+          "wasteRatio": 0.42857142857142855
+        }
+      ]
+    },
+    {
+      "taskId": "rv-01-running-sum",
+      "sessionId": "session-ad51ca45-86ac-45ab-9d2c-5d0aa6ccf87a",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 157,
+      "toolCalls": 6,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 16.67,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 154,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 2,
+          "wasteRatio": 0.4
+        }
+      ]
+    },
+    {
+      "taskId": "rv-02-shadow-loop",
+      "sessionId": "session-ba142f14-c0f8-44ca-a1b1-708b772549a4",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 157,
+      "toolCalls": 6,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 16.67,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 154,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 2,
+          "wasteRatio": 0.4
+        }
+      ]
+    },
+    {
+      "taskId": "rv-03-zero-guard",
+      "sessionId": "session-bae44f08-d827-4942-ab9c-197eea50f22d",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 203,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 12.5,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 200,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-04-mutable-default",
+      "sessionId": "session-5a10f9dd-2629-4487-a52f-314bec4c5ad1",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 368,
+      "toolCalls": 13,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 12,
+          "wastedCalls": 1,
+          "wasteRatio": 0.08333333333333333
+        }
+      ]
+    },
+    {
+      "taskId": "rv-05-key-normalize",
+      "sessionId": "session-fcc2df80-8e61-461e-9b7b-e993fcaadd8e",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 187,
+      "toolCalls": 6,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 6,
+          "wastedCalls": 1,
+          "wasteRatio": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "taskId": "rv-06-lower-bound",
+      "sessionId": "session-94b45f44-c119-49d9-bd51-24bdb8aab514",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 184,
+      "toolCalls": 5,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 1,
+          "wasteRatio": 0.2
+        }
+      ]
+    },
+    {
+      "taskId": "rv-07-unique-order",
+      "sessionId": "session-a5847e1f-7933-4c4f-a550-80f85f4a36d7",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 186,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-08-chunk",
+      "sessionId": "session-aaf4bd41-2bd5-48b2-bf2c-562932bee6f0",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 177,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-09-merge-safe",
+      "sessionId": "session-14d36d06-45c4-4900-9c14-434993c136ba",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 248,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 12.5,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 182,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/rv-09-merge-safe/sandbox/merge.py to earlier content"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 3,
+          "wasteRatio": 0.375
+        }
+      ]
+    },
+    {
+      "taskId": "rv-10-flatten",
+      "sessionId": "session-fdcadbee-45dd-434e-a3fe-451f9e3da374",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 222,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-11-rotate",
+      "sessionId": "session-f2747573-5509-4631-8832-60ddcb5574df",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 234,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-12-tally",
+      "sessionId": "session-93ec0fed-1b8a-4ca7-b0c8-138962bcc891",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 177,
+      "toolCalls": 7,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 14.29,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 174,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-13-wrap-config",
+      "sessionId": "session-86a99a6f-ddc9-4118-a5c0-5fa9343a01a9",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 263,
+      "toolCalls": 11,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 9.09,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 260,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-14-tax-rate",
+      "sessionId": "session-23ce1a41-1f53-496e-ae32-9c67f29980e6",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 262,
+      "toolCalls": 10,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 10,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 259,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-15-fee-helper",
+      "sessionId": "session-22c16323-314d-4980-8204-ff0e1e32c695",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 180,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 12.5,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 177,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 2,
+          "wasteRatio": 0.4
+        }
+      ]
+    },
+    {
+      "taskId": "rv-16-mean-helper",
+      "sessionId": "session-27bb19dd-a99a-413b-b3cb-8ccb09535118",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 228,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 12.5,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 225,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 5,
+          "wastedCalls": 2,
+          "wasteRatio": 0.4
+        }
+      ]
+    },
+    {
+      "taskId": "rv-17-name-clean",
+      "sessionId": "session-febb9c37-ea4a-4ef4-aecc-55a5c6b1c534",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 226,
+      "toolCalls": 9,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-18-region-pick",
+      "sessionId": "session-bc1d4c92-4b3c-41f6-a238-71498a1f66c7",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 289,
+      "toolCalls": 9,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 11.11,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 286,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-19-indent-depth",
+      "sessionId": "session-e0b75d27-dbe8-42e6-8a9e-c2a3be75c2c1",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 241,
+      "toolCalls": 9,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 11.11,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 238,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-20-window-size",
+      "sessionId": "session-28772282-772e-49bf-9417-4a260581caca",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 248,
+      "toolCalls": 10,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 10,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 245,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-21-stale-dir",
+      "sessionId": "session-1129f376-a101-433f-ab89-e690a1d7935a",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 196,
+      "toolCalls": 10,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 9,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "taskId": "rv-22-stale-subdir",
+      "sessionId": "session-10fb84c0-f00a-4dbe-8400-b921ef2f1df5",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 237,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 0,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 0,
+      "per100Calls": 0,
+      "hits": [],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-23-stale-dir",
+      "sessionId": "session-48d20ab2-52f2-48af-bcd0-ab2909af7ef9",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 283,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 25,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 212,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/rv-23-stale-dir/sandbox/conf_reader.py to earlier content"
+        },
+        {
+          "class": "C3",
+          "seq": 280,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-24-parent-path",
+      "sessionId": "session-742a75d9-e499-477e-b13d-07a2af398da2",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 213,
+      "toolCalls": 8,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 12.5,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 210,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 7,
+          "wastedCalls": 2,
+          "wasteRatio": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "taskId": "rv-25-stale-dir",
+      "sessionId": "session-912473ab-91f2-4740-8ff1-3d7abcf71a76",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 241,
+      "toolCalls": 9,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 11.11,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 238,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-26-stale-archive",
+      "sessionId": "session-dcc748c7-1316-44bf-9ecc-755e9ea593a2",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 230,
+      "toolCalls": 9,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 1,
+      "per100Calls": 11.11,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 227,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 8,
+          "wastedCalls": 2,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-27-clamp-contract",
+      "sessionId": "session-2d4c6510-7f16-4513-90aa-1b417eb43a40",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 935,
+      "toolCalls": 24,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 8.33,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 405,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C2",
+          "seq": 474,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/rv-27-clamp-contract/sandbox/clamp.py to earlier content"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 24,
+          "wastedCalls": 6,
+          "wasteRatio": 0.25
+        }
+      ]
+    },
+    {
+      "taskId": "rv-28-batches-contract",
+      "sessionId": "session-d2c39108-0dfd-4f27-88be-197d5d4060d4",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 1211,
+      "toolCalls": 32,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 2,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 6.25,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 250,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 852,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 27,
+          "wastedCalls": 3,
+          "wasteRatio": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "taskId": "rv-29-parser-contract",
+      "sessionId": "session-8c84fb41-8335-47ab-87c7-0f1c2838a068",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": true,
+      "events": 822,
+      "toolCalls": 18,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 3,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 3,
+      "per100Calls": 16.67,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 284,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 615,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 819,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 17,
+          "wastedCalls": 8,
+          "wasteRatio": 0.47058823529411764
+        }
+      ]
+    },
+    {
+      "taskId": "rv-30-zscore-contract",
+      "sessionId": "session-cd032361-afd2-4ac7-805e-baf187ee3e81",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 694,
+      "toolCalls": 17,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 2,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 11.76,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 538,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 691,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 16,
+          "wastedCalls": 8,
+          "wasteRatio": 0.5
+        }
+      ]
+    },
+    {
+      "taskId": "rv-31-revert-contract",
+      "sessionId": "session-6cc724c8-92d7-4e6d-b3a8-45499e72aedc",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 516,
+      "toolCalls": 13,
+      "counts": {
+        "C1": 0,
+        "C2": 0,
+        "C3": 3,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 3,
+      "per100Calls": 23.08,
+      "hits": [
+        {
+          "class": "C3",
+          "seq": 250,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 421,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        },
+        {
+          "class": "C3",
+          "seq": 513,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 11,
+          "wastedCalls": 5,
+          "wasteRatio": 0.45454545454545453
+        }
+      ]
+    },
+    {
+      "taskId": "rv-32-plan-reopen",
+      "sessionId": "session-243a5cb4-911c-4fc9-88c5-f85fd30bbc66",
+      "exitCode": 0,
+      "timedOut": false,
+      "taskSuccess": false,
+      "events": 981,
+      "toolCalls": 26,
+      "counts": {
+        "C1": 0,
+        "C2": 1,
+        "C3": 1,
+        "C4": 0,
+        "C5": 0
+      },
+      "total": 2,
+      "per100Calls": 7.69,
+      "hits": [
+        {
+          "class": "C2",
+          "seq": 668,
+          "note": "restore of /home/cgodwin/bench-runs/corr-g244-run2-20260825071455/sessions/additive/rv-32-plan-reopen/sandbox/stage_a.py to earlier content"
+        },
+        {
+          "class": "C3",
+          "seq": 978,
+          "note": "assistant message with correction token after erroring result or todo flip"
+        }
+      ],
+      "turns": [
+        {
+          "turn": 3,
+          "totalCalls": 26,
+          "wastedCalls": 3,
+          "wasteRatio": 0.11538461538461539
+        }
+      ]
+    }
+  ],
+  "meanCorrections": 0.8260869565217391,
+  "per100Calls": 8.00561797752809,
+  "successRate": 0.8840579710144928
+}
